@@ -55,7 +55,6 @@ namespace AdventOfCode.Services.Services
                         _reportRepairConfig.Year)
                     {
                         var answer = numbers.ElementAt(right) * numbers.ElementAt(left) * numbers.ElementAt(i);
-                        Console.WriteLine(answer);
                         return answer;
                     }
                     if (numbers.ElementAt(i) + numbers.ElementAt(left) + numbers.ElementAt(right) <

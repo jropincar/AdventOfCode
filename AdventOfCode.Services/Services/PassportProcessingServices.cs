@@ -40,7 +40,7 @@ namespace AdventOfCode.Services.Services
                 into passportDictionary
                 select JsonConvert.SerializeObject(passportDictionary, Formatting.Indented)
                 into json
-                select JsonConvert.DeserializeObject<Passport>(json)).Count(passport => _passportValidator.Validate((Passport) passport).IsValid);
+                select JsonConvert.DeserializeObject<Passport>(json)).Count(passport => _passportValidator.Validate(passport).IsValid);
         }
 
         //Wrote this for the first star. Its dumber than the one above.
@@ -57,13 +57,8 @@ namespace AdventOfCode.Services.Services
                     .ToList();
                 if (passport.Count() == 8 || (passport.Count() == 7 && passport.All(x => !x.Contains("cid"))))
                 {
-                    Console.WriteLine("valid");
                     valid++;
 
-                }
-                else
-                {
-                    Console.WriteLine("not valid");
                 }
             }
             return valid;

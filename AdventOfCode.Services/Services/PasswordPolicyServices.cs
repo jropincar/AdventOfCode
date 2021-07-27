@@ -38,7 +38,6 @@ namespace AdventOfCode.Services.Services
                       passwordAndPolicy.Policy.Character
                       ^ passwordAndPolicy.Value.ElementAt(passwordAndPolicy.Policy.HighConstraint - 1) ==
                       passwordAndPolicy.Policy.Character)) continue;
-                Console.WriteLine($"The character {passwordAndPolicy.Policy.Character} is found at EITHER {passwordAndPolicy.Policy.LowConstraint} or {passwordAndPolicy.Policy.HighConstraint} in {passwordAndPolicy.Value}, but not both!");
                 correct++;
             }
             return correct;

@@ -32,7 +32,7 @@ namespace AdventOfCode.Services.Services
                 var path = currentLine.ElementAt(spotToCheck);
                 if (path == '#')
                 {
-                    trees += 1;
+                    trees++;
                 }
                 rightLocation += _tobogganTrajectoryConfig.Right;
             }
